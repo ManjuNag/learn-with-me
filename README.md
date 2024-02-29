@@ -14,14 +14,16 @@ Roles and responsibilities
 <br>
 
 Azure services used:
-1.	Azure blob storage
-2.	Storage account
-3.	Azure Backup service
-4.	Azure AI services
-5.	chatbot
-6.Azure Role Based access Control(RBAC)
+1.	Azure blob storage<br>
+2.	Storage account<br>
+3.	Azure Backup service<br>
+4.	Azure AI services<br>
+5.	chatbot<br>
+6.Azure Role Based access Control(RBAC)<br>
+
 Problem Statement:
 Limited access to practical education opportunities hinders the development of crucial skills among students. Traditional education often lacks hands-on experiences, leaving students unprepared for real-world challenges in various fields.
+
 Description:
 Welcome to our educational practice website! Our platform is dedicated to providing learners with a rich and engaging environment to enhance their skills and knowledge across various subjects. Through a collection of carefully curated resources, interactive quizzes, and informative articles, users can embark on a journey of continuous learning.
 Our website offers a user-friendly interface that makes navigation intuitive and learning enjoyable. Whether you're a student looking to reinforce classroom concepts, a professional seeking to expand your expertise, or simply an enthusiast eager to explore new topics, our site has something for everyone.
