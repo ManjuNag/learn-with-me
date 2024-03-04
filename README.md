@@ -7,10 +7,10 @@ Learn with me project could bridge this gap by providing hands-on experiences, s
 3.	GitHub Repository URL:  https://github.com/manojbachu/electro.git <br>
 4.	Industry : Practice 
 #Roles and responsibilities
-1.Manju Nageswari (project management):Manages the web development project <br>
-2.Anand varma (Deployment) :Deployment and maintenance of  project infrastructure <br>
-3.Tarun (Documentation):Responsible for managing the documentation process <br>
-4.Kethana (content management):Responsible for managing the website content
+1.N.Manju Nageswari (project management):Manages the web development project <br>
+2.E.Anand varma (Deployment) :Deployment and maintenance of  project infrastructure <br>
+3.A.Tarun (Documentation):Responsible for managing the documentation process <br>
+4.CH.Kethana (content management):Responsible for managing the website content
 <br>
 
 #Azure services used:
