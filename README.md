@@ -5,7 +5,7 @@ Learn with me project could bridge this gap by providing hands-on experiences, s
 1.	Project Demo URL: https://electrostorage2.z13.web.core.windows.net/ <br>
 2.	Demo Video URL: https://youtu.be/8ErNjxboKGo<br>
 3.	GitHub Repository URL:  https://github.com/manojbachu/electro.git <br>
-4.	Industry : Online Practice 
+4.	Industry :  Practice 
 	 
 # Roles and responsibilities
 1.N.Manju Nageswari (project management):Manages the web development project <br>
