@@ -4,7 +4,7 @@ Learn with me project could bridge this gap by providing hands-on experiences, s
 # Project Details
 1.	Project Demo URL: https://electrostorage2.z13.web.core.windows.net/ <br>
 2.	Demo Video URL: https://youtu.be/hIbzyo1FyBM<br>
-3.	GitHub Repository URL:  https://github.com/manojbachu/electro.git <br>
+3.	GitHub Repository URL: https://github.com/ManjuNag/learn-with-me.git <br>
 4.	Industry :  Practice 
 	 
 # Roles and responsibilities
