@@ -5,7 +5,7 @@ Learn with me project could bridge this gap by providing hands-on experiences, s
 1.	Project Demo URL:  <br>
 2.	Demo Video URL: https://youtu.be/hIbzyo1FyBM<br>
 3.	GitHub Repository URL: https://github.com/ManjuNag/learn-with-me.git <br>
-4.	Industry :  Practice 
+4.	Industry :  Education 
 	 
 # Roles and responsibilities
 1.N.Manju Nageswari (project management):Manages the web development project <br>
