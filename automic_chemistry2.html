@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Automic Chemistry Intermediate</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-attachment: fixed;
+    }
+
+    .container {
+      width: 850px;
+      padding: 20px;
+      margin-top: 150px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 30px;
+      color: #ffffff;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .question {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .options {
+       margin-bottom: 20px;
+    }
+
+    .option {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #428bca;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        margin-right: 10px;
+    }
+
+    .button:hover {
+        background-color: #3071a9;
+    }
+
+    .result {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    .hide{
+        display: none;
+    } 
+  </style>
+</head>
+<body style="background-image: url(quizbg.jpeg);">
+  <div class="container" style="background-image: url(bgche.jpeg);">
+    <h1>Automic Chemistry - Intermediate</h1>
+    <div id="physics"></div>
+    <div id="result" class="result"></div>
+    <button id="submit" class="button">Submit</button>
+    <button id="retry" class="button hide">Retry</button>
+    <button id="showAnswer" class="button hide">Show Answer</button>
+  </div>
+  <script>
+    const quizData = [
+    {
+      question:  ' 1. What is the maximum number of electrons that can occupy the second energy level (shell) of an atom? ' ,
+      options:  [ ' 2 ' ,  ' 8 ' ,  ' 18 ' , ' 32 ' ] ,
+      answer:  ' 8 ' ,
+    } ,
+
+{
+      question:  ' 2. What is the term for atoms of the same element with a different number of neutrons? ' ,
+      options:  [ ' Isomers ' ,  ' Isotopes ' ,  ' Allotropes ' , ' Isotones ' ] ,
+      answer:  ' Isotopes ' ,
+    } ,
+
+{
+      question:  ' 3. Which of the following elements has the highest electronegativity? ' ,
+      options:  [ ' Sodium (Na) ' ,  ' Fluorine (F) ' ,  ' Carbon (C) ' , ' Aluminum (Al) ' ] ,
+      answer:  ' Fluorine (F) ' ,
+    } ,
+
+{
+      question:  ' 4. What is the purpose of the Pauli Exclusion Principle? ' ,
+      options:  [ ' Defines the energy levels of electrons ' ,  ' Describes the behavior of electrons in a magnetic field ' ,  ' States that no two electrons in an atom can have the same set of quantum numbers ' , ' Explains the emission of photons during electron transitions ' ] ,
+      answer:  ' States that no two electrons in an atom can have the same set of quantum numbers ' ,
+    } ,
+
+{
+      question:  ' 5. What is the relationship between wavelength and frequency in electromagnetic waves? ' ,
+      options:  [ ' Inversely proportional ' ,  ' Directly proportional ' ,  ' No relationship ' , ' Exponential relationship ' ] ,
+      answer:  ' Inversely proportional ' ,
+    } ,
+
+{
+      question:  ' 6. Which subatomic particle is responsible for the chemical properties of an element? ' ,
+      options:  [ ' Proton ' ,  ' Electron ' ,  ' Neutron ' , ' Positron ' ] ,
+      answer:  ' Electron ' ,
+    } ,
+
+{
+      question:  ' 7.  What is the quantum number that describes the orientation of an orbital in space? ' ,
+      options:  [ ' Principal quantum number (n) ' ,  ' Azimuthal quantum number (l) ' ,  ' Magnetic quantum number (ml) ' , ' Spin quantum number (ms) ' ] ,
+      answer:  ' Magnetic quantum number (ml) ' ,
+    } ,
+
+{
+      question:  ' 8. Which element has the electron configuration 1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ ' ,
+      options:  [ ' Carbon (C) ' ,  ' Oxygen (O) ' ,  ' Sodium (Na) ' , ' Chlorine (Cl) ' ] ,
+      answer:  ' Sodium (Na) ' ,
+    } ,
+
+{
+      question:  ' 9. What is the term for the energy required to remove an electron from an atom in its gaseous state? ' ,
+      options:  [ ' Ionization energy ' ,  ' Electron affinity ' ,  ' Electronegativity ' , ' Atomic radius ' ] ,
+      answer:  ' Ionization energy ' ,
+    } ,
+
+{
+      question:  ' 10. In the periodic table, elements in the same group have: ' ,
+      options:  [ ' Similar atomic masses ' ,  ' Similar chemical properties ' ,  ' The same number of protons ' , ' The same number of neutrons ' ] ,
+      answer:  ' Similar chemical properties ' ,
+    } ,
+
+    /*
+    {
+      question: '',
+      options: ['', '', '', ''],
+      answer: '',
+    },*/
+    
+];
+
+const quizContainer = document.getElementById('physics');
+const resultContainer = document.getElementById('result');
+const submitButton = document.getElementById('submit');
+const retryButton = document.getElementById('retry');
+const showAnswerButton = document.getElementById('showAnswer');
+
+let currentQuestion = 0;
+let score = 0;
+let incorrectAnswers = [];
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+function displayQuestion() {
+  const questionData = quizData[currentQuestion];
+
+  const questionElement = document.createElement('div');
+  questionElement.className = 'question';
+  questionElement.innerHTML = questionData.question;
+
+  const optionsElement = document.createElement('div');
+  optionsElement.className = 'options';
+
+  const shuffledOptions = [...questionData.options];
+  shuffleArray(shuffledOptions);
+
+  for (let i = 0; i < shuffledOptions.length; i++) {
+    const option = document.createElement('label');
+    option.className = 'option';
+
+    const radio = document.createElement('input');
+    radio.type = 'radio';
+    radio.name = 'quiz';
+    radio.value = shuffledOptions[i];
+
+    const optionText = document.createTextNode(shuffledOptions[i]);
+
+    option.appendChild(radio);
+    option.appendChild(optionText);
+    optionsElement.appendChild(option);
+  }
+
+  quizContainer.innerHTML = '';
+  quizContainer.appendChild(questionElement);
+  quizContainer.appendChild(optionsElement);
+}
+
+function checkAnswer() {
+  const selectedOption = document.querySelector('input[name="quiz"]:checked');
+  if (selectedOption) {
+    const answer = selectedOption.value;
+    if (answer === quizData[currentQuestion].answer) {
+      score++;
+    } else {
+      incorrectAnswers.push({
+        question: quizData[currentQuestion].question,
+        incorrectAnswer: answer,
+        correctAnswer: quizData[currentQuestion].answer,
+      });
+    }
+    currentQuestion++;
+    selectedOption.checked = false;
+    if (currentQuestion < quizData.length) {
+      displayQuestion();
+    } else {
+      displayResult();
+    }
+  }
+}
+
+function displayResult() {
+  quizContainer.style.display = 'none';
+  submitButton.style.display = 'none';
+  retryButton.style.display = 'inline-block';
+  showAnswerButton.style.display = 'inline-block';
+  resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
+}
+
+function retryQuiz() {
+  currentQuestion = 0;
+  score = 0;
+  incorrectAnswers = [];
+  quizContainer.style.display = 'block';
+  submitButton.style.display = 'inline-block';
+  retryButton.style.display = 'none';
+  showAnswerButton.style.display = 'none';
+  resultContainer.innerHTML = '';
+  displayQuestion();
+}
+
+function showAnswer() {
+  quizContainer.style.display = 'none';
+  submitButton.style.display = 'none';
+  retryButton.style.display = 'inline-block';
+  showAnswerButton.style.display = 'none';
+
+  let incorrectAnswersHtml = '';
+  for (let i = 0; i < incorrectAnswers.length; i++) {
+    incorrectAnswersHtml += `
+      <p>
+        <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
+        <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
+        <strong>Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
+      </p>
+    `;
+  }
+
+  resultContainer.innerHTML = `
+    <p>You scored ${score} out of ${quizData.length}!</p>
+    <p>Incorrect Answers:</p>
+    ${incorrectAnswersHtml}
+  `;
+}
+
+submitButton.addEventListener('click', checkAnswer);
+retryButton.addEventListener('click', retryQuiz);
+showAnswerButton.addEventListener('click', showAnswer);
+
+displayQuestion();
+  </script>
+</body>
+</html>

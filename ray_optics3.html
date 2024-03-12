@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ray Optics Advance</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-attachment: fixed;
+    }
+
+    .container {
+      width: 850px;
+      padding: 20px;
+      margin-top: 150px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 30px;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .question {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .options {
+       margin-bottom: 20px;
+    }
+
+    .option {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #428bca;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        margin-right: 10px;
+    }
+
+    .button:hover {
+        background-color: #3071a9;
+    }
+
+    .result {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    .hide{
+        display: none;
+    } 
+  </style>
+</head>
+<body style="background-image: url(pphy1.jpeg);">
+  <div class="container" style="background-image: url(qb.jpeg)">
+    <h1>Ray Optics - Advance</h1>
+    <div id="physics"></div>
+    <div id="result" class="result"></div>
+    <button id="submit" class="button">Submit</button>
+    <button id="retry" class="button hide">Retry</button>
+    <button id="showAnswer" class="button hide">Show Answer</button>
+  </div>
+  <script>
+    const quizData = [
+    {
+      question: '1. Which of the following lights deviates the most when it passes through a prism?',
+      options: ['Red Light','Neither red light nor violet light','violet light', 'Both'],
+      answer: 'Violet Lighht',
+    },
+    {
+      question: '2. Which of the following phenomena of light results in a mirage?',
+      options: ['refraction of light', 'reflection of light', 'total internal reflection', 'diffraction of light'],
+      answer: 'total internal reflection',
+    },
+    {
+      question: '3. For which of the following is the field of view maximum?',
+      options: ['concave mmirror', 'convex mirror', 'plane mirror', 'cylindrical mirror'],
+      answer: 'convex mirror',
+    },
+    {
+      question: '4. What happens when the light is refracted into a medium?',
+      options: ['both frequency and wavelength of the light increase', 'the wavelength increases but the frequency remains unchanged', 'both the wavelength and frequency decrease', 'the wavelength decreases but the frequency remains constant'],
+      answer: 'the wavelength increases but the frequency remains unchanged',
+    },
+    {
+      question: '5. If a glass prism is dipped in water, what happens to its dispersive power?',
+      options: ['increasses', 'decreases', 'does not change', 'no effect'],
+      answer: 'decreases',
+    },
+    {
+      question: '6. What should be increased to increase the angular magnification of a simple microscope?',
+      options: ['the power of the lens', 'the focal length of the lens', 'lens aperture', 'object size'],
+      answer: 'the power of the lens',
+    },
+    {
+      question: '7. Which of the following phenomenon is used in optical fibre?',
+      options: ['refraction', 'diffraction', 'scattering', 'total internal reflection'],
+      answer: 'total internal reflection',
+    },
+    {
+      question: '8. Which of the following statements is true for total internal reflection?',
+      options: ['light travels from rarer medium to denser medium', 'light travels from denser medium to rarer medium', 'light travels in water only', 'light travels in the air only'],
+      answer: 'light travels from denser medium to rarer medium',
+    },
+    {
+      question: '9. A convex lens is dipped in a liquid whose refractive index is equal to the refractive index of the lens. Then what is its focal length?',
+      options: ['focal length will become zero', 'focal length will become infinite', 'focal length will reduce, but not become zero', 'remains unchanged'],
+      answer: 'Focal length will become infinite',
+    },
+    {
+      question: '10. For a telescope, the larger the diameter of the objective lens ',
+      options: ['Greater the resolving power', 'Greater the magnifying power', 'Smaller the resolving power', 'Smaller the magnifying power'],
+      answer: 'Greater the resolving power',
+    },
+
+    /*
+    {
+      question: '',
+      options: ['', '', '', ''],
+      answer: '',
+    },*/
+    
+];
+
+const quizContainer = document.getElementById('physics');
+const resultContainer = document.getElementById('result');
+const submitButton = document.getElementById('submit');
+const retryButton = document.getElementById('retry');
+const showAnswerButton = document.getElementById('showAnswer');
+
+let currentQuestion = 0;
+let score = 0;
+let incorrectAnswers = [];
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+function displayQuestion() {
+  const questionData = quizData[currentQuestion];
+
+  const questionElement = document.createElement('div');
+  questionElement.className = 'question';
+  questionElement.innerHTML = questionData.question;
+
+  const optionsElement = document.createElement('div');
+  optionsElement.className = 'options';
+
+  const shuffledOptions = [...questionData.options];
+  shuffleArray(shuffledOptions);
+
+  for (let i = 0; i < shuffledOptions.length; i++) {
+    const option = document.createElement('label');
+    option.className = 'option';
+
+    const radio = document.createElement('input');
+    radio.type = 'radio';
+    radio.name = 'quiz';
+    radio.value = shuffledOptions[i];
+
+    const optionText = document.createTextNode(shuffledOptions[i]);
+
+    option.appendChild(radio);
+    option.appendChild(optionText);
+    optionsElement.appendChild(option);
+  }
+
+  quizContainer.innerHTML = '';
+  quizContainer.appendChild(questionElement);
+  quizContainer.appendChild(optionsElement);
+}
+
+function checkAnswer() {
+  const selectedOption = document.querySelector('input[name="quiz"]:checked');
+  if (selectedOption) {
+    const answer = selectedOption.value;
+    if (answer === quizData[currentQuestion].answer) {
+      score++;
+    } else {
+      incorrectAnswers.push({
+        question: quizData[currentQuestion].question,
+        incorrectAnswer: answer,
+        correctAnswer: quizData[currentQuestion].answer,
+      });
+    }
+    currentQuestion++;
+    selectedOption.checked = false;
+    if (currentQuestion < quizData.length) {
+      displayQuestion();
+    } else {
+      displayResult();
+    }
+  }
+}
+
+function displayResult() {
+  quizContainer.style.display = 'none';
+  submitButton.style.display = 'none';
+  retryButton.style.display = 'inline-block';
+  showAnswerButton.style.display = 'inline-block';
+  resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
+}
+
+function retryQuiz() {
+  currentQuestion = 0;
+  score = 0;
+  incorrectAnswers = [];
+  quizContainer.style.display = 'block';
+  submitButton.style.display = 'inline-block';
+  retryButton.style.display = 'none';
+  showAnswerButton.style.display = 'none';
+  resultContainer.innerHTML = '';
+  displayQuestion();
+}
+
+function showAnswer() {
+  quizContainer.style.display = 'none';
+  submitButton.style.display = 'none';
+  retryButton.style.display = 'inline-block';
+  showAnswerButton.style.display = 'none';
+
+  let incorrectAnswersHtml = '';
+  for (let i = 0; i < incorrectAnswers.length; i++) {
+    incorrectAnswersHtml += `
+      <p>
+        <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
+        <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
+        <strong>Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
+      </p>
+    `;
+  }
+
+  resultContainer.innerHTML = `
+    <p>You scored ${score} out of ${quizData.length}!</p>
+    <p>Incorrect Answers:</p>
+    ${incorrectAnswersHtml}
+  `;
+}
+
+submitButton.addEventListener('click', checkAnswer);
+retryButton.addEventListener('click', retryQuiz);
+showAnswerButton.addEventListener('click', showAnswer);
+
+displayQuestion();
+  </script>
+</body>
+</html>
