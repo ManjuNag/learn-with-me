@@ -11,7 +11,7 @@ Learn with me project could bridge this gap by providing hands-on experiences, s
 1.N.Manju Nageswari (project management):Manages the web development project <br>
 2.E.Anand varma (Deployment) :Deployment and maintenance of  project infrastructure <br>
 3.A.Tarun (Documentation):Responsible for managing the documentation process <br>
-4.CH.Kethana (content management):Responsible for managing the website content
+4.CH.Kethana (content management):Responsible for managing the website content and discription
 <br>
 
 # Azure services used:
