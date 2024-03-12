@@ -23,7 +23,7 @@ Learn with me project could bridge this gap by providing hands-on experiences, s
 6.  Azure Role Based access Control(RBAC)<br>
 
 # Problem Statement:
-Limited access to practical education opportunities hinders the development of crucial skills among students. Traditional education often lacks hands-on experiences, leaving students unprepared for real-world challenges in various fields
+Limited access to practical education opportunities hinders the development of crucial skills among students. Traditional education often lacks hands-on experiences, leaving students unprepared for real-world challenges in various fields.
 
 # Description:
 A practice education project typically involves hands-on learning experiences that allow individuals to apply theoretical knowledge in a practical setting. This can include internships, apprenticeships, or projects where participants gain real-world skills and insights relevant to their field of study or profession. The project aims to bridge the gap between theory and practical application, enhancing the participants' abilities and preparing them for future challenges in their chosen domain.
