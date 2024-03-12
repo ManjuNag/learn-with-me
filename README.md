@@ -1,4 +1,4 @@
-# learn-with-me
+![backup vault](https://github.com/ManjuNag/learn-with-me/assets/97151621/7f7d7e3b-215a-4822-adaf-d3ee7a2556dc)# learn-with-me
 Learn with me project could bridge this gap by providing hands-on experiences, simulations, and real-world projects within the curriculum. This approach enhances student's ability to apply theoretical concepts, fostering a deeper understanding and better preparing them for professional challenges.
 
 # Project Details
@@ -22,6 +22,7 @@ Learn with me project could bridge this gap by providing hands-on experiences, s
 5.	chatbot<br>
 6.  Azure Role Based access Control(RBAC)<br>
 
+
 # Problem Statement:
 Limited access to practical education opportunities hinders the development of crucial skills among students. Traditional education often lacks hands-on experiences, leaving students unprepared for real-world challenges in various fields.
 
@@ -35,6 +36,30 @@ Azure Blob Storage:- Azure Blob Storage is Microsoft's scalable object storage s
 
 #Azure Backup Service:- Azure Backup Service by Microsoft safeguards critical data in the Azure cloud. It offers automated and scalable backup solutions for virtual machines, applications, and files. With features like long-term retention and geo-redundancy, it ensures data resilience and facilitates efficient disaster recovery, enhancing overall data protection strategies.
 
-# Azure AI Service
+# Azure AI Services
 #Azure Chatbot :- The Azure AI Language Chatbot is a cutting-edge conversational agent powered by Microsoft's Azure platform. Leveraging advanced natural language processing capabilities, it facilitates dynamic and context-aware interactions. This intelligent chatbot employs machine learning algorithms to comprehend user queries, providing personalized responses and assistance across diverse domains. Seamlessly integrating with Azure services, it ensures scalability and reliability.
 <h1>Screenshot’s:</h1>
+
+# Storage Account
+![storage account](https://github.com/ManjuNag/learn-with-me/assets/97151621/ad6d63ab-5a86-43bc-9473-8197d6e881be)
+
+# Blob files
+![blob files](https://github.com/ManjuNag/learn-with-me/assets/97151621/d070c511-53d6-4e5d-b045-859e500b18f0)
+
+# Backup vault
+![backup vault](https://github.com/ManjuNag/learn-with-me/assets/97151621/71728516-4526-403f-b7e5-1d668751d205)
+
+# Backup policy
+![backup vault](https://github.com/ManjuNag/learn-with-me/assets/97151621/a5891354-1431-4509-9534-617b9674a3c2)
+
+# Azure Bot
+![bot](https://github.com/ManjuNag/learn-with-me/assets/97151621/6fbc2a28-e342-4383-90c6-a597a7603348)
+
+# Website Overview
+![website overview](https://github.com/ManjuNag/learn-with-me/assets/97151621/655a03ab-8fea-4ee9-88b0-c46e7557564f)
+
+# Chatbot Response
+![chatbot](https://github.com/ManjuNag/learn-with-me/assets/97151621/5e0e61dc-b4f8-4499-b456-9403650e6bfe)
+
+# Resource visualizer
+![resource visualizer](https://github.com/ManjuNag/learn-with-me/assets/97151621/22f4a0c1-d4bc-4fbf-9ee3-0e42dce5876e)
