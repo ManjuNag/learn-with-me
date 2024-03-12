@@ -2,7 +2,7 @@
 Learn with me project could bridge this gap by providing hands-on experiences, simulations, and real-world projects within the curriculum. This approach enhances student's ability to apply theoretical concepts, fostering a deeper understanding and better preparing them for professional challenges.
 
 # Project Details
-1.	Project Demo URL:  <br>
+1.	Project Demo URL: https://onlinesession.z13.web.core.windows.net/  <br>
 2.	Demo Video URL: https://youtu.be/hIbzyo1FyBM<br>
 3.	GitHub Repository URL: https://github.com/ManjuNag/learn-with-me.git <br>
 4.	Industry :  Education 
