@@ -2,25 +2,25 @@
 Learn with me project could bridge this gap by providing hands-on experiences, simulations, and real-world projects within the curriculum. This approach enhances student's ability to apply theoretical concepts, fostering a deeper understanding and better preparing them for professional challenges.
 
 # Project Details
-1.	Project Demo URL: https://onlinesession.z13.web.core.windows.net/  <br>
+1.	Project Demo URL: https://onlinesession.z13.web.core.windows.net/  
 2.	Demo Video URL: https://youtu.be/hIbzyo1FyBM<br>
-3.	GitHub Repository URL: https://github.com/ManjuNag/learn-with-me.git <br>
+3.	GitHub Repository URL: https://github.com/ManjuNag/learn-with-me.git 
 4.	Industry :  Education 
 	 
 # Roles and responsibilities
-1.N.Manju Nageswari (project management):Manages the web development project <br>
-2.E.Anand varma (Deployment) :Deployment and maintenance of  project infrastructure <br>
-3.A.Tarun (Documentation):Responsible for managing the documentation process <br>
-4.CH.Kethana (content management):Responsible for managing the website content and discription
-<br>
+1. N.Manju Nageswari (project management):Manages the web development project 
+2. E.Anand varma (Deployment) :Deployment and maintenance of  project infrastructure 
+3. A.Tarun (Documentation):Responsible for managing the documentation process 
+4. CH.Kethana (content management):Responsible for managing the website content and discription
+
 
 # Azure services used:
-1.	Azure blob storage<br>
-2.	Storage account<br>
-3.	Azure Backup service<br>
-4.	Azure AI services<br>
-5.	chatbot<br>
-6.  Azure Role Based access Control(RBAC)<br>
+1. Azure blob storage
+2. Storage account
+3. Azure Backup service
+4. Azure AI services
+5. chatbot
+6. Azure Role Based access Control(RBAC)
 
 
 # Problem Statement:
