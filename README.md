@@ -25,11 +25,13 @@ Learn with me project could bridge this gap by providing hands-on experiences, s
 
 # Problem Statement:
    Many students face challenges in traditional educational settings, struggling to apply theoretical knowledge to real-world scenarios. This gap between theory and practice hinders their ability to develop practical skills and be adequately prepared for the workforce.Creating a practice education project that integrates hands-on experiences, simulations, and real-world projects into the curriculum. This approach aims to bridge the gap between theory and practice, better preparing students for their future careers by fostering practical skills, critical thinking, and problem-solving abilities.
+   
    Limited access to practical education opportunities hinders the development of crucial skills among students. Traditional education often lacks hands-on experiences, leaving students unprepared for real-world challenges in various fields.
    
 
 # Description:
    Our website offers a user-friendly interface that makes navigation intuitive and learning enjoyable. Whether you're a student looking to reinforce classroom concepts, a professional seeking to expand your expertise, or simply an enthusiast eager to explore new topics, our site has something for everyone.
+   
    A practice education project typically involves hands-on learning experiences that allow individuals to apply theoretical knowledge in a practical setting. This can include internships, apprenticeships, or projects where participants gain real-world skills and insights relevant to their field of study or profession. The project aims to bridge the gap between theory and practical application, enhancing the participants' abilities and preparing them for future challenges in their chosen domain.
 
 # Core Azure Services:
