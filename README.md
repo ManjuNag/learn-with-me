@@ -35,13 +35,13 @@ Learn with me project could bridge this gap by providing hands-on experiences, s
    A practice education project typically involves hands-on learning experiences that allow individuals to apply theoretical knowledge in a practical setting. This can include internships, apprenticeships, or projects where participants gain real-world skills and insights relevant to their field of study or profession. The project aims to bridge the gap between theory and practical application, enhancing the participants' abilities and preparing them for future challenges in their chosen domain.
 
 # Core Azure Services:
-Azure Blob Storage:- Azure Blob Storage is Microsoft's scalable object storage solution in the Azure cloud. It enables secure and cost-effective storage of unstructured data, such as documents and images. Offering 			     seamless integration with applications, it supports data of any size and optimizes accessibility through a globally distributed network.
+> Azure Blob Storage :- Azure Blob Storage is Microsoft's scalable object storage solution in the Azure cloud. It enables secure and cost-effective storage of unstructured data, such as documents and images. Offering 		        seamless integration with applications, it supports data of any size and optimizes accessibility through a globally distributed network.
 
-Azure Storage Account:- Azure Storage Account is a foundational component in Microsoft Azure, providing secure and scalable cloud storage. It supports various storage services like Blob, File, Queue, and Table, 
-                        accommodating diverse data types. With features such as redundancy options and access controls, it ensures reliable and efficient data management.
+> Azure Storage Account:- Azure Storage Account is a foundational component in Microsoft Azure, providing secure and scalable cloud storage. It supports various storage services like Blob, File, Queue, and Table, 
+  			  accommodating diverse data types. With features such as redundancy options and access controls, it ensures reliable and efficient data management.
 
-Azure Backup Service:- Azure Backup Service by Microsoft safeguards critical data in the Azure cloud. It offers automated and scalable backup solutions for virtual machines, applications, and files. With features like 
-                       long-term retention and geo-redundancy, it ensures data resilience and facilitates efficient disaster recovery, enhancing overall data protection strategies.
+> Azure Backup Service:- Azure Backup Service by Microsoft safeguards critical data in the Azure cloud. It offers automated and scalable backup solutions for virtual machines, applications, and files. With features like 
+                         long-term retention and geo-redundancy, it ensures data resilience and facilitates efficient disaster recovery, enhancing overall data protection strategies.
 
 # Azure AI Services
 Azure Chatbot :- The Azure AI Language Chatbot is a cutting-edge conversational agent powered by Microsoft's Azure platform. Leveraging advanced natural language processing capabilities, it facilitates dynamic and context-aware interactions. This intelligent chatbot employs machine learning algorithms to comprehend user queries, providing personalized responses and assistance across diverse domains. Seamlessly integrating with Azure services, it ensures scalability and reliability.
